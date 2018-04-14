@@ -2,6 +2,7 @@ var express=require('express');
 var bodyParser=require('body-parser');
 var app=express();//Instance 
 var mongoose=require('mongoose');
+var port=process.env.PORT || 3000;
 mongoose.connect('mongodb://pranjil:pranjil@ds255588.mlab.com:55588/shit');
 
 //Database Setup
@@ -107,4 +108,4 @@ app.get('/*',function(req,res){
 	res.send("404 page");
 })
 */
-app.listen('8080');
+app.listen(port);
